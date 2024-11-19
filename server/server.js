@@ -16,10 +16,17 @@ import statistics from "./routes/statisticRoute.js";
 const app = express();
 const PORT = 8080;
 
+const allowedOrigins = ["https://fit-4-you-website.vercel.app"];
+
 app.use(
   cors({
-    origin: "https://fit-4-you-website.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
