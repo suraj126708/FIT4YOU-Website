@@ -53,6 +53,10 @@ app.use("/addWorkout", addWorkOut);
 app.use("/profile", getAllExercises);
 app.use("/statistics", statistics);
 
+app.get("/test", (req, res) => {
+  res.send("Working properly");
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
