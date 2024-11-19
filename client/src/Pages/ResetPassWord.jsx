@@ -31,7 +31,7 @@ const ForgotPassword = () => {
       };
 
       const response = await fetch(
-        "http://localhost:8080/auth/change-password",
+        "https://fit-4-you-website-api.vercel.app/auth/change-password",
         {
           method: "POST",
           headers: {

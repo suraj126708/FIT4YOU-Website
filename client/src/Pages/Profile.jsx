@@ -25,12 +25,15 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchProfileData = async () => {
       try {
-        const response = await fetch("http://localhost:8080/profile", {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const response = await fetch(
+          "https://fit-4-you-website-api.vercel.app/profile",
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
 
         if (!response.ok) {
           throw new Error("Failed to fetch profile data");
@@ -45,12 +48,15 @@ const ProfilePage = () => {
 
     const fetchUserWorkouts = async () => {
       try {
-        const response = await fetch("http://localhost:8080/profile/workouts", {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const response = await fetch(
+          "https://fit-4-you-website-api.vercel.app/profile/workouts",
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
 
         if (!response.ok) {
           throw new Error("Failed to fetch workouts");
@@ -110,7 +116,7 @@ const ProfilePage = () => {
         {/* Left Section */}
         <div className="w-full lg:w-1/4 bg-slate-300 bg-opacity-80 shadow-md rounded-lg p-4 flex flex-col items-center mb-6 lg:mb-0">
           <img
-            src={`http://localhost:8080/uploads/${fileName}`}
+            src={`https://fit-4-you-website-api.vercel.app/uploads/${fileName}`}
             alt="Profile"
             className="w-40 h-40 rounded-full object-cover mb-4"
           />

@@ -14,11 +14,14 @@ export default function Trainers() {
   useEffect(() => {
     const fetchTrainers = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/trainers", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const response = await axios.get(
+          "https://fit-4-you-website-api.vercel.app/trainers",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         setTrainers(response.data.data || []);
         setLoading(false);
       } catch (err) {
@@ -51,7 +54,7 @@ export default function Trainers() {
             className="h-[100vh] w-[100%] bg-zinc-900 relative flex justify-around items-center"
           >
             <TrainerImage
-              img={`http://localhost:8080/trainers/${trainer.profilePic}`}
+              img={`https://fit-4-you-website-api.vercel.app/trainers/${trainer.profilePic}`}
               side={index % 2 === 0 ? "left" : "right"}
               name={trainer.name}
             />

@@ -27,7 +27,7 @@ const LoginPage = () => {
     setErrors(null);
 
     try {
-      const url = "http://localhost:8080/auth/login";
+      const url = "https://fit-4-you-website-api.vercel.app/login";
       const response = await fetch(url, {
         method: "POST",
         headers: {

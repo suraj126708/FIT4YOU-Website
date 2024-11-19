@@ -21,11 +21,14 @@ export default function ContactUs() {
     setErrorMessage("");
 
     try {
-      const response = await axios.post("http://localhost:8080/contact", {
-        name,
-        email,
-        message,
-      });
+      const response = await axios.post(
+        "https://fit-4-you-website-api.vercel.app/contact",
+        {
+          name,
+          email,
+          message,
+        }
+      );
 
       setResponseMessage(response.data.message);
       handleSuccess(response.data.message);

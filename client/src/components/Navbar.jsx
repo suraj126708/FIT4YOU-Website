@@ -26,7 +26,7 @@ const NavBar = () => {
   const fileName = profilepic ? profilepic.split("\\").pop() : null;
 
   const profilePicUrl = fileName
-    ? `http://localhost:8080/uploads/${fileName}`
+    ? `https://fit-4-you-website-api.vercel.app/uploads/${fileName}`
     : "https://flowbite.com/docs/images/people/profile-picture-3.jpg";
 
   return (

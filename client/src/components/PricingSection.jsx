@@ -47,7 +47,7 @@ export default function Pricing() {
     const fetchPlans = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/subscription-plans",
+          "https://fit-4-you-website-api.vercel.app/subscription-plans",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

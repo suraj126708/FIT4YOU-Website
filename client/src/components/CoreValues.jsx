@@ -9,7 +9,9 @@ const CoreValues = () => {
     // Fetch the statistics from the API
     const fetchStats = async () => {
       try {
-        const response = await fetch("http://localhost:8080/statistics");
+        const response = await fetch(
+          "https://fit-4-you-website-api.vercel.app/statistics"
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch statistics");
         }

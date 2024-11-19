@@ -12,7 +12,7 @@ const UsersList = () => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/getUsersRoute",
+          "https://fit-4-you-website-api.vercel.app/getUsersRoute",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

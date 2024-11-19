@@ -12,11 +12,14 @@ const UsersQuestionsList = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/faqRoute", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const response = await axios.get(
+          "https://fit-4-you-website-api.vercel.app/faqRoute",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         setQuestions(response.data.data || []); // Only unanswered questions will be fetched
         setLoading(false);
       } catch (err) {

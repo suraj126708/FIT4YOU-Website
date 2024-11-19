@@ -15,8 +15,12 @@ import statistics from "./routes/statisticRoute.js";
 
 const app = express();
 const PORT = 8080;
+const corsOptions = {
+  origin: "https://fit-4-you-website-api.vercel.app",
+  optionsSuccessStatus: 200,
+};
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

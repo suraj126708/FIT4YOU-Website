@@ -77,7 +77,7 @@ const RegistrationPage = () => {
       });
 
       const response = await axios.post(
-        "http://localhost:8080/auth/register",
+        "https://fit-4-you-website-api.vercel.app/auth/register",
         formDataToSend,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

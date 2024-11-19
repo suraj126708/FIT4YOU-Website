@@ -50,14 +50,17 @@ const WorkoutForm = () => {
       };
 
       try {
-        const response = await fetch("http://localhost:8080/addWorkout", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-          body: JSON.stringify(workoutData),
-        });
+        const response = await fetch(
+          "https://fit-4-you-website-api.vercel.app/addWorkout",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+            body: JSON.stringify(workoutData),
+          }
+        );
 
         if (response.ok) {
           // Clear form fields on successful submission

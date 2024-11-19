@@ -4,7 +4,7 @@ const Team = () => {
   const [team, setTeam] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/getTeamDetailsRoute")
+    fetch("https://fit-4-you-website-api.vercel.app/getTeamDetailsRoute")
       .then((response) => response.json())
       .then((data) => setTeam(data))
       .catch((error) => console.error("Error fetching team data:", error));
@@ -23,7 +23,7 @@ const Team = () => {
           >
             <img
               className="w-40 h-40 rounded-full object-cover border-4 border-neutral-600"
-              src={`http://localhost:8080/${member.profile_pic}`}
+              src={`https://fit-4-you-website-api.vercel.app/${member.profile_pic}`}
               alt={member.name}
             />
             <div className="text-center">
