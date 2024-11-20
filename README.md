@@ -130,6 +130,7 @@ Contributions are welcome! Feel free to fork the repository and submit a pull re
 Developed with ❤️ by **Suraj Gitte ☀**.  
 If you have any suggestions or feedback, feel free to reach out!
 
-[LinkedIn]([https://linkedin.com/in/suraj-gitte](https://www.linkedin.com/in/suraj-gitte-7b71a7288/)) | [GitHub]([https://github.com/your-username](https://github.com/suraj126708))
+[LinkedIn](https://www.linkedin.com/in/suraj-gitte-7b71a7288/) | [GitHub](https://github.com/suraj126708)
+
 ```
 
